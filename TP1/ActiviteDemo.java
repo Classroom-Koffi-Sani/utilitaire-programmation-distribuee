@@ -1,3 +1,5 @@
+package TP1;
+
 class ActiviteDemo {
     public static void main(String args[]) {
         new NouvelleActivite();

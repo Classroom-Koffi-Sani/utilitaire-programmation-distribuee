@@ -1,3 +1,5 @@
+package TP1;
+
 class NouvelleActivite implements Runnable {
     Thread th;
     NouvelleActivite() {
