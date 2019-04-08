@@ -5,7 +5,7 @@ class Synch {
         Callme cible = new Callme();
         Caller activ1 = new Caller(cible, "Bonjour");
         Caller activ2 = new Caller(cible, "monde");
-        Caller activ1 = new Caller(cible, "synchronise");
+        Caller activ3 = new Caller(cible, "synchronise");
         // On attend que les activites se terminent
         try {
             activ1.th.join();
