@@ -6,11 +6,11 @@ class FileAttente {
     boolean valeurMise = false; // A-t-on mis une valeur dans
     synchronized int prendre() {
         if(valeurMise == false)
-        try {
-        wait();
-        } catch(InterruptedException e) {
-            System.out.println("InterruptedException inter");
-        }
+            try {
+            wait();
+            } catch(InterruptedException e) {
+                System.out.println("InterruptedException inter");
+            }
         System.out.println("Pris : " + n);
         valeurMise = false;
         notify();
@@ -19,11 +19,11 @@ class FileAttente {
 
     synchronized void mettre(int n) {
         if(valeurMise == true)
-        try {
-            wait();
-        } catch(InterruptedException e) {
-        System.out.println("InterruptedException");
-        }
+            try {
+                wait();
+            } catch(InterruptedException e) {
+            System.out.println("InterruptedException");
+            }
         this.n = n;
         valeurMise = true;
         System.out.println("Mis : " + n);
