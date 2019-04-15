@@ -15,12 +15,19 @@ public class Operation extends Thread {
       System.out.println(nom);
 //        compte.ajouter(i);
 //        compte.retirer(i);
-      compte.operationNulle(i);
+      synchronized (compte) {
+        compte.ajouter(i);
+        compte.retirer(i);
+        //compte.operationNulle(i);
+      }
       int solde = compte.getSolde();
       System.out.println(nom);
       if (solde != 0) {
         System.out.println(nom + ":**solde=" + solde);
         System.exit(1);
+      } else {
+        System.out.println(nom + ":**solde=" + solde);
+        System.exit(0);
       }
     }
   }

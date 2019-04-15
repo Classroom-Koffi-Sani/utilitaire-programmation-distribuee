@@ -3,12 +3,12 @@ package TP7;
 public class Compte {
   private int solde = 0;
 
-  public void ajouter(int somme) {
+  public synchronized void ajouter(int somme) {
     solde += somme;
     System.out.println(" ajoute " + somme);
   }
 
-  public void retirer(int somme) {
+  public synchronized void retirer(int somme) {
     solde -= somme;
     System.out.println(" retire " + somme);
   }
@@ -20,7 +20,7 @@ public class Compte {
     System.out.println(" retire " + somme);
   }
 
-  public int getSolde() {
+  public synchronized nt getSolde() {
     return solde;
   }
 }

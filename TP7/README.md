@@ -1,7 +1,7 @@
 Voici 2 classes `Compte` (correspond à un compte bancaire) et `Operation` (thread qui effectue des opérations sur un compte bancaire).
  
 
-1. Examinez le code et faites exécuter la classe `Operation`. Constatez le problème : `Operation` effectue des opérations qui devraient laisser le sode du compte inchangé, et pourtant, après un moment, le solde ne reste pas à 0. Expliquez.
+1. Examinez le code et faites exécuter la classe `Operation`. Constatez le problème : `Operation` effectue des opérations qui devraient laisser le solde du compte inchangé, et pourtant, après un moment, le solde ne reste pas à 0. Expliquez.
     
 2. Modifiez le code pour empêcher ce problème.
 
