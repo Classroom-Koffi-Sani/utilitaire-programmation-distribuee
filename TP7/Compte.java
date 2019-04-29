@@ -20,7 +20,7 @@ public class Compte {
     System.out.println(" retire " + somme);
   }
 
-  public synchronized nt getSolde() {
+  public synchronized int getSolde() {
     return solde;
   }
 }
